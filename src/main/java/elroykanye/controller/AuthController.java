@@ -11,13 +11,9 @@ import elroykanye.services.AuthService;
 @Controller
 public class AuthController {
 
-	AuthService authService;
+	AuthService authService = new AuthService();
 	
-	public AuthController(AuthService as) {
-		authService = as;
-	}
-	
-	@RequestMapping(value="login", method=RequestMethod.POST)
+	@RequestMapping(value="templates/login", method=RequestMethod.POST)
 	public ModelAndView login(@RequestParam String username, @RequestParam String userpass) {
 		ModelAndView mv = new ModelAndView();
 		if (authService.login(username, userpass)) {
@@ -30,7 +26,7 @@ public class AuthController {
 		return mv;
 	}
 
-	@RequestMapping(value="register", method = RequestMethod.POST)
+	@RequestMapping(value="templates/register", method = RequestMethod.POST)
 	public ModelAndView register(@RequestParam String username, @RequestParam String userpass) {
 		ModelAndView mv = new ModelAndView();
 		// mv.addObject("message", authService.register(username, userpass) ? "Successful register" : "Unsuccessful register");
