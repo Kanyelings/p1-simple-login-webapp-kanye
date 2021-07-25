@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* decorate body with beautiful animation */
+body {
+	background-color: blueviolet;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+section {
+    background-color: blue;
+	width: 95%;
+    margin: 0 auto;
+}
+
+.hero {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* stylise a form */
+form {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+input {
+	padding: 12px;
+	text-align: center;
+}

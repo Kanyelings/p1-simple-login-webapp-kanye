@@ -17,7 +17,7 @@ public class ServletConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver vr = new InternalResourceViewResolver();
-		vr.setPrefix("/templates/views");
+		vr.setPrefix("/templates/");
 		vr.setSuffix(".jsp");
 		vr.setExposeContextBeansAsAttributes(true);
 		return vr;

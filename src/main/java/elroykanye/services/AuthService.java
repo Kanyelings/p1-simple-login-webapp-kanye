@@ -4,14 +4,14 @@ import elroykanye.beans.User;
 import elroykanye.repositories.UserRepository;
 
 public class AuthService {
-	UserRepository userRep;
+	UserRepository userRep = new UserRepository();
 	
-	public AuthService(UserRepository ur) {
-		userRep = ur;
-	}
 	
 	public boolean login(String username, String password) {
-		return userRep.get(username).equals(password);
+		if (userRep.get(username) == null) return false;
+		else {
+			return userRep.get(username).getUserpass().equals(password);
+		}
 	}
 	
 	public boolean register(String username, String password) {
